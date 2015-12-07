@@ -71,7 +71,7 @@ function dialogDismissed(buttonIndex) {
 function dialogDismissed(buttonIndex) {
 	
 	if(buttonIndex==1) new Toast({content: "Get your birthday suit on then!", duration: 3000});
-   	else if(buttonIndex==2) new Toast({content: 'Ill just be queit and forever alone then :(', duration: 3000});
+   	else if(buttonIndex==2) new Toast({content: 'Ill just be quiet and forever alone then :(', duration: 3000});
 
 }
 
