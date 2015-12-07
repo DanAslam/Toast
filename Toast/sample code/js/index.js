@@ -15,43 +15,6 @@ $(document).on('pageinit', function() {
 		createNotification();
 	});
 	
-	$('#amazingButton').on('click', function() {
-		createDialog();
-	});
-
-
-});
-
-
-
-function createMessage(){		
-	//phoneGap and jQueryMobile do not support toast messages directly
-    //so we can add this using toast.js
-    new Toast({content: 'Toasty Time!', duration: 1000}); 	
-}
-        	
-
-function createDialog() {
-
-	//phonegap supports native dialog boxes.
-	//here's a simple example
-      
-	navigator.notification.confirm(
-    	'Think carefully...',  // message
-        dialogDismissed,         // callback
-        'Do you think you are amazing?,            // title
-        ['Of course', 'Nope']                  // buttons
-    );
-
-}
-
-        	
-function dialogDismissed(buttonIndex) {
-	
-	if(buttonIndex==1) new Toast({content: "Why the f*** you lying!", duration: 3000});
-   	else if(buttonIndex==2) new Toast({content: 'Thanks for being honest :)', duration: 3000});
-
-}
     
     function createDialog() {
 
