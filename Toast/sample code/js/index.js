@@ -33,7 +33,7 @@ function createDialog() {
 	//here's a simple example
       
 	navigator.notification.confirm(
-    	'What do you think of this dialog?',  // message
+    	'Is it?! Pls tell me!',  // message
         dialogDismissed,         // callback
         'Its peanut butter toasty time?',            // title
         ['Indeed', 'Nah mate']                  // buttons
