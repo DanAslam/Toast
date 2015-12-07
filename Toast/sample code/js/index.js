@@ -14,6 +14,10 @@ $(document).on('pageinit', function() {
 	$('#notificationButton').on('click', function() {
 		createNotification();
 	});
+	
+	$('#amazingButton').on('click', function() {
+		createDialog();
+	});
 
 
 });
@@ -33,14 +37,35 @@ function createDialog() {
 	//here's a simple example
       
 	navigator.notification.confirm(
+    	'Think carefully...',  // message
+        dialogDismissed,         // callback
+        'Do you think you are amazing?,            // title
+        ['Of course', 'Nope']                  // buttons
+    );
+
+}
+
+        	
+function dialogDismissed(buttonIndex) {
+	
+	if(buttonIndex==1) new Toast({content: "Why the f*** you lying!", duration: 3000});
+   	else if(buttonIndex==2) new Toast({content: 'Thanks for being honest :)', duration: 3000});
+
+}
+    
+    function createDialog() {
+
+	//phonegap supports native dialog boxes.
+	//here's a simple example
+      
+	navigator.notification.confirm(
     	'Is it?! Pls tell me!',  // message
         dialogDismissed,         // callback
         'Its peanut butter toasty time?',            // title
         ['Indeed', 'Nah mate']                  // buttons
     );
 
-}
-        	
+}    	
         	
         	
 function dialogDismissed(buttonIndex) {
